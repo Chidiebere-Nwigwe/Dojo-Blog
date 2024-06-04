@@ -1,0 +1,11 @@
+to create react app in targeted directory
+npx create-react-app dojo-blog
+
+cannot output booleans and objects in app.js , only strings, numbers and arrays
+
+sfc + tab key creates stateless functional template.
+
+// create database in folder using json server
+npx json-server --watch data/db.json --port 8000
+
+fetch request is always an asynchronous request so always add your .then()
