@@ -1,8 +1,6 @@
-
-
 import Navbar from './Navbar';
 import Home from './Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'; // Changed to HashRouter
 import Create from './Create';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
@@ -15,15 +13,20 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/> 
-        {/* or
-        <Navbar><Navbar/> */}
+        <Navbar />
+        {/* The Navbar component */}
+        {/* You can pass props to Navbar here if needed, e.g., <Navbar title={title} /> */}
+        
         <div className="content">
-          {/* <h1>{ title }</h1>
-          <p>Liked { likes } times</p>
-          <p> { 10 } </p>
-          <p>{ [1,2,3,4,5] }</p>
-          <a href={link}>Google Site</a> */}
+          {/* 
+            The following are just examples of unused code. You can delete them if no longer necessary:
+            <h1>{ title }</h1>
+            <p>Liked { likes } times</p>
+            <p> { 10 }</p>
+            <p>{ [1,2,3,4,5] }</p>
+            <a href={link}>Google Site</a> 
+          */}
+
           <Switch>
             <Route exact path="/">
               <Home />
@@ -34,13 +37,13 @@ function App() {
             <Route path="/blogs/:id">
               <BlogDetails />
             </Route>
-            {/* this last catch all route should always be at the bottom */}
+            {/* This last catch-all route should always be at the bottom */}
             <Route path="*">
               <NotFound />
             </Route>
           </Switch>
         </div>
-    </div>
+      </div>
     </Router>
   );
 }
