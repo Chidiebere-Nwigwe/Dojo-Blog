@@ -39,8 +39,7 @@ function App() {
             </Route>
             {/* This last catch-all route should always be at the bottom */}
             <Route path="*">
-              {/* <NotFound /> */}
-              <Home />
+              <NotFound /> 
             </Route>
           </Switch>
         </div>
